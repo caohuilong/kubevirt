@@ -141,6 +141,7 @@ func Convert_HostDevices_And_GPU(devices v1.Devices, domain *api.Domain, c *Conv
 		if err != nil {
 			return err
 		}
+		hostDevice.Rom = &api.Rom{Enabled: "no"}
 		domain.Spec.Devices.HostDevices = append(domain.Spec.Devices.HostDevices, hostDevice)
 	}
 

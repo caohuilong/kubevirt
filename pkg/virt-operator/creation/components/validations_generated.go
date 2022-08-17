@@ -4850,14 +4850,6 @@ var CRDsValidation map[string]string = map[string]string{
           description: Conditions are specific points in VirtualMachineInstance's pod runtime.
           items:
             properties:
-              lastProbeTime:
-                format: date-time
-                nullable: true
-                type: string
-              lastTransitionTime:
-                format: date-time
-                nullable: true
-                type: string
               message:
                 type: string
               reason:
@@ -4940,11 +4932,6 @@ var CRDsValidation map[string]string = map[string]string{
             completed:
               description: Indicates the migration completed
               type: boolean
-            endTimestamp:
-              description: The time the migration action ended
-              format: date-time
-              nullable: true
-              type: string
             failed:
               description: Indicates that the migration failed
               type: boolean
@@ -4956,11 +4943,6 @@ var CRDsValidation map[string]string = map[string]string{
               type: string
             sourceNode:
               description: The source node that the VMI originated on
-              type: string
-            startTimestamp:
-              description: The time the migration action began
-              format: date-time
-              nullable: true
               type: string
             targetDirectMigrationNodePorts:
               additionalProperties:

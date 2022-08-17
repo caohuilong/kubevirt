@@ -458,6 +458,7 @@ type HostDevice struct {
 	Model     string           `xml:"model,attr,omitempty"`
 	Address   *Address         `xml:"address,emitempty"`
 	Alias     *Alias           `xml:"alias,omitempty"`
+	Rom       *Rom
 }
 
 type HostDeviceSource struct {
