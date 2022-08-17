@@ -534,6 +534,7 @@ type HostDevice struct {
 	Alias     *Alias           `xml:"alias,omitempty"`
 	Display   string           `xml:"display,attr,omitempty"`
 	RamFB     string           `xml:"ramfb,attr,omitempty"`
+	Rom       *Rom             `xml:"rom,omitempty"`
 }
 
 type HostDeviceSource struct {

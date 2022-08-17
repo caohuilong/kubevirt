@@ -81,6 +81,7 @@ func createHostDevices(hostDevicesData []HostDeviceMetaData, addrPool AddressPoo
 				return nil, fmt.Errorf(failedCreateHostDeviceFmt, hostDeviceData.Name, err)
 			}
 		}
+		hostDevice.Rom = &api.Rom{Enabled: "no"}
 		hostDevices = append(hostDevices, *hostDevice)
 		log.Log.Infof("host-device created: %s", address)
 	}
